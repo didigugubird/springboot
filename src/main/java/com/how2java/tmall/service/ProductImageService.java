@@ -15,8 +15,7 @@ public class ProductImageService   {
     public static final String type_single = "single";
     public static final String type_detail = "detail";
 
-    @Autowired ProductImageDAO productImageDAO;
-    @Autowired ProductService productService;
+    @Autowired private ProductImageDAO productImageDAO;
 
     public void add(ProductImage bean) {
         productImageDAO.save(bean);

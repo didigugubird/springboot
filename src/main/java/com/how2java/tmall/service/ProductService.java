@@ -15,8 +15,14 @@ import java.util.Optional;
 
 @Service
 public class ProductService {
+<<<<<<< HEAD
+    @Autowired private ProductDAO productDAO;
+    @Autowired private CategoryService categoryService;
+    @Autowired private ProductImageService productImageService;
+=======
     @Autowired ProductDAO productDAO;
     @Autowired CategoryService categoryService;
+>>>>>>> parent of 8182a71 (second commit)
 
     public void add(Product bean) {
         productDAO.save(bean);

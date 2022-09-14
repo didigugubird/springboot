@@ -10,8 +10,8 @@ import java.util.List;
 
 @Service
 public class OrderItemService {
-    @Autowired OrderItemDAO orderItemDAO;
-    @Autowired ProductImageService productImageService;
+    @Autowired private OrderItemDAO orderItemDAO;
+    @Autowired private ProductImageService productImageService;
 
     public void fill(List<Order> orders) {
         for (Order order : orders)
