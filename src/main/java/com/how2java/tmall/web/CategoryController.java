@@ -29,7 +29,7 @@ public class CategoryController {
             ) throws Exception {
 
         start = start<0?0:start;
-        Page4Navigator<Category> page =categoryService.list(start, 10, 7);  //5表示导航分页最多有5个，像 [1,2,3,4,5] 这样
+        Page4Navigator<Category> page =categoryService.list(start, 10, 7);
         return page;
     }
     @PostMapping("/categories")
