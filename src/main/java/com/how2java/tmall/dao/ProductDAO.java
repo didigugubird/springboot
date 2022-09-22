@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductDAO extends JpaRepository<Product,Integer> {
-    Page<Product> findByCategory(Optional<Category> category, Pageable pageable);
+    Page<Product> findByCategory(Category category, Pageable pageable);
     List<Product> findByCategoryOrderById(Category category);
+    List<Product> findByNameLike(String keyword, Pageable pageable);
 }

@@ -38,7 +38,7 @@ public class PropertyService {
     }
 
     public Page4Navigator<Property> list(int cid, int start, int size, int navigatePages) {
-        Optional<Category> category = categoryService.get(cid);
+        Category category = categoryService.get(cid);
 
         Sort sort = Sort.by(Sort.Direction.ASC, "id");
         Pageable pageable = PageRequest.of(start, size, sort);

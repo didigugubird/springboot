@@ -40,8 +40,8 @@ public class CategoryService {
         categoryDAO.save(bean);
     }
     public void delete(int id) {categoryDAO.deleteById(id); }
-    public Optional<Category> get(int id) {
-        return categoryDAO.findById(id);
+    public Category get(int id) {
+        return categoryDAO.findById(id).orElse(null);
     }
     public void update(Category bean) {
         categoryDAO.save(bean);

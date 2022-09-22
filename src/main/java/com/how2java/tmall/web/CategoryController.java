@@ -47,8 +47,8 @@ public class CategoryController {
         return null;
     }
     @GetMapping("/categories/{id}")
-    public Optional<Category> get(@PathVariable("id") int id) throws Exception {
-        Optional<Category> bean=categoryService.get(id);
+    public Category get(@PathVariable("id") int id) throws Exception {
+        Category bean=categoryService.get(id);
         return bean;
     }
     @PutMapping("/categories/{id}")
