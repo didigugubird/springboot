@@ -1,6 +1,7 @@
 package com.how2java.tmall.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Table(name = "category")
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
 
+@Data
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,7 @@ public class Category {
     @Transient
     List<List<Product>> productsByRow;
 
-    public String getName() {
+   /* public String getName() {
         return name;
     }
     public void setName(String name) {
@@ -47,5 +49,5 @@ public class Category {
 
     public void setProductsByRow(List<List<Product>> productsByRow) {
         this.productsByRow = productsByRow;
-    }
+    }*/
 }

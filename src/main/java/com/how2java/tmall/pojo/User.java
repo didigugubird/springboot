@@ -1,12 +1,14 @@
 package com.how2java.tmall.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,7 @@ public class User {
     @Transient
     private String anonymousName;
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
@@ -73,5 +75,5 @@ public class User {
     }
     public void setAnonymousName(String anonymousName) {
         this.anonymousName = anonymousName;
-    }
+    }*/
 }

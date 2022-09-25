@@ -15,10 +15,12 @@ import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.how2java.tmall.service.OrderService;
+import lombok.Data;
 
 @Entity
 @Table(name = "order_")
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
+@Data
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,7 +53,7 @@ public class Order {
     @Transient
     private String statusDesc;
 
-    public void setStatusDesc(String statusDesc) {
+    /*public void setStatusDesc(String statusDesc) {
         this.statusDesc = statusDesc;
     }
 
@@ -196,6 +198,6 @@ public class Order {
 
     public void setTotalNumber(int totalNumber) {
         this.totalNumber = totalNumber;
-    }
+    }*/
 
 }

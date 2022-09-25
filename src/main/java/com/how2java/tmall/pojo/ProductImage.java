@@ -11,10 +11,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 @Entity
 @Table(name = "productimage")
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer"})
+@Data
 public class ProductImage {
 
     @Id
@@ -28,7 +30,7 @@ public class ProductImage {
     private Product product;
 
     private String type;
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
@@ -47,5 +49,5 @@ public class ProductImage {
     }
     public void setProduct(Product product) {
         this.product = product;
-    }
+    }*/
 }

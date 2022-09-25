@@ -1,12 +1,14 @@
 package com.how2java.tmall.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "propertyvalue")
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
+@Data
 public class PropertyValue {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +24,7 @@ public class PropertyValue {
         private Property property;
 
         private String value;
-        public int getId() {
+        /*public int getId() {
             return id;
         }
 
@@ -52,5 +54,5 @@ public class PropertyValue {
         @Override
         public String toString() {
             return "PropertyValue [id=" + id + ", product=" + product + ", property=" + property + ", value=" + value + "]";
-        }
+        }*/
 }

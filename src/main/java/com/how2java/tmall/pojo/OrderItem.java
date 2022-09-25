@@ -1,12 +1,14 @@
 package com.how2java.tmall.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "orderitem")
 @JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+@Data
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +29,7 @@ public class OrderItem {
 
     private int number;
 
+/*
     public int getId() {
         return id;
     }
@@ -65,5 +68,5 @@ public class OrderItem {
 
     public void setNumber(int number) {
         this.number = number;
-    }
+    }*/
 }

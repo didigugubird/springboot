@@ -14,12 +14,16 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class CategoryService {
-    @Autowired
+
     CategoryDAO categoryDAO;
+    @Autowired
+    private void setCategoryDAO(CategoryDAO categoryDAO){
+        this.categoryDAO = categoryDAO;
+    }
 
     public Page4Navigator<Category> list(int start, int size, int navigatePages) {
 
