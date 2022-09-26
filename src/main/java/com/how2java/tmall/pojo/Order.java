@@ -53,7 +53,7 @@ public class Order {
     @Transient
     private String statusDesc;
 
-    /*public void setStatusDesc(String statusDesc) {
+    public void setStatusDesc(String statusDesc) {
         this.statusDesc = statusDesc;
     }
 
@@ -198,6 +198,6 @@ public class Order {
 
     public void setTotalNumber(int totalNumber) {
         this.totalNumber = totalNumber;
-    }*/
+    }
 
 }
